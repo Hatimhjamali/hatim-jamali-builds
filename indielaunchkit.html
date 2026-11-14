@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IndieLaunchKit — Builds by Hatim Jamali</title>
+<meta name="description" content="A desktop app for indie developers: paste your itch.io link, answer a short intake, and get a store page that's ready to publish, with every field filled, an asset checklist, a layout and a score."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">H<span>H</span>J<small>BUILDS</small></a>
+  <ul>
+    <li><a href="index.html">All builds</a></li>
+    <li><a href="haakim.html">Haakim</a></li>
+    <li><a href="https://hatimhjamali-hub.github.io/portfolio/">Game design portfolio ↗</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <a class="back" href="index.html">← All builds</a>
+  <header class="proj-hero">
+    <span class="status off">Shelved before release</span>
+    <h1>IndieLaunchKit</h1>
+    <div class="kind">Desktop app · itch.io publish-assist</div>
+    <p class="lede">A desktop app for indie developers: paste your itch.io link, answer a short intake, and get a store page that's ready to publish, with every field filled, an asset checklist, a layout and a score.</p>
+  </header>
+
+  <section class="block">
+    <h2>Why I started it</h2>
+    <p>I shipped my own game, The Wasted Times, on itch.io, and by my own scoring the launch page was a 5 or 6 out of 10. Indie developers are makers, not marketers: we skip the launch chores or do them badly. Steam has plenty of tools for this. itch.io has almost none.</p><p>So I was the first customer. The tool exists to make my next launch a 10 out of 10, and my own shipped game became its test case.</p>
+  </section>
+
+  <section class="block">
+    <h2>How it works</h2>
+    <p class="sub">One run takes a game from a few answers to a scored page.</p>
+    <div class="flow"><div class="stage"><div><strong>Intake.</strong><span> Twenty questions about the game. This is the main input and it's required.</span></div></div><div class="stage"><div><strong>Optional documents.</strong><span> A design document or pitch can be dropped in. The app reads it and pre-fills the intake, which the developer then corrects.</span></div></div><div class="stage"><div><strong>Writing.</strong><span> Six separate prompts each write one part of the page: the short description, the long description, tags and so on.</span></div></div><div class="stage"><div><strong>Checking.</strong><span> Every answer is checked against a schema and retried up to three times if it's malformed.</span></div></div><div class="stage"><div><strong>Scoring.</strong><span> The assembled page is scored against my rubric: 15 items worth 85 points, covering what a strong itch.io page needs.</span></div></div></div>
+  </section>
+
+  <section class="block">
+    <h2>Design decisions</h2>
+    <div class="cols"><div class="card"><strong>Do one job.</strong><span>I narrowed the scope twice in one day. Competitor research turned up a direct rival for the marketing half, so version one became publish-assist only.</span></div><div class="card"><strong>The AI lives inside the app.</strong><span>A 4.4 GB language model ships in the installer, with a smaller one for low-memory PCs. Nothing to install, no account, and no server bill for me.</span></div><div class="card"><strong>The title is never written by AI.</strong><span>A game's name belongs to its maker. The app copies it exactly as typed and marks which fields came from the developer and which were generated.</span></div><div class="card"><strong>The sharing test.</strong><span>Every feature had to pass one question: would a stranger share the output with a friend within ten seconds? If not, it wasn't built.</span></div><div class="card"><strong>Answers first, files second.</strong><span>The intake is the source of truth. Documents only enrich it, and the app never reads the game's own files.</span></div><div class="card"><strong>Test without the model.</strong><span>A separate checker replays saved outputs through the rubric, so quality can be tested in seconds without running the AI.</span></div></div>
+  </section>
+
+  <section class="block">
+    <h2>Where it stopped</h2>
+    <div class="verdict"><p><strong>Shelved before release.</strong> The generator, the document reader and the rubric scorer all work end to end on my own game. It never reached a version I'd put in front of other developers.</p></div>
+  </section>
+
+  <section class="block">
+    <h2>Built with</h2>
+    <div class="chips"><span class="chip">Tauri 2</span><span class="chip">Rust</span><span class="chip">Svelte + TypeScript</span><span class="chip">llama.cpp</span><span class="chip">Qwen 2.5 7B</span><span class="chip">SQLite</span><span class="chip">Windows</span></div>
+    <a class="back" href="index.html">← All builds</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-left">©2026 HATIM JAMALI</div>
+  <div class="footer-links">
+    <a href="https://hatimhjamali-hub.github.io/portfolio/">Game design portfolio</a>
+    <a href="https://www.linkedin.com/in/hatim-jamali-510889212/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:hatimhjamali@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

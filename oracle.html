@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>O.R.A.C.L.E — Builds by Hatim Jamali</title>
+<meta name="description" content="A personal assistant I talk to through Telegram. It runs entirely on my own PC with a local AI model, remembers what I tell it, runs jobs on a schedule, and researches Reddit, RSS feeds and the web for me."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">H<span>H</span>J<small>BUILDS</small></a>
+  <ul>
+    <li><a href="index.html">All builds</a></li>
+    <li><a href="haakim.html">Haakim</a></li>
+    <li><a href="https://hatimhjamali-hub.github.io/portfolio/">Game design portfolio ↗</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <a class="back" href="index.html">← All builds</a>
+  <header class="proj-hero">
+    <span class="status">Shipped · personal use</span>
+    <h1>O.R.A.C.L.E</h1>
+    <div class="kind">Telegram bot · local AI · memory and scheduler</div>
+    <p class="lede">A personal assistant I talk to through Telegram. It runs entirely on my own PC with a local AI model, remembers what I tell it, runs jobs on a schedule, and researches Reddit, RSS feeds and the web for me.</p>
+  </header>
+
+  <section class="block">
+    <h2>What it does</h2>
+    <div class="cols"><div class="card"><strong>Remembers.</strong><span>Two kinds of memory: a small profile of my preferences, and a store of notes and facts it can search by meaning, not just by matching words.</span></div><div class="card"><strong>Runs on a schedule.</strong><span>One-off reminders and repeating jobs, kept through restarts and set to India time.</span></div><div class="card"><strong>Researches.</strong><span>Checks subreddits, RSS feeds and web pages, then saves what it finds to memory.</span></div><div class="card"><strong>Drafts in my voice.</strong><span>Reads my brand notes before writing anything public, so drafts sound like me.</span></div><div class="card"><strong>Two speeds.</strong><span>A small fast model answers everyday chat. A larger, slower one handles deep questions and the scheduled jobs.</span></div><div class="card"><strong>Guided or fast.</strong><span>A bare command opens buttons that walk me through it. The same command with details skips straight to the result.</span></div></div>
+  </section>
+
+  <section class="block">
+    <h2>Design decisions</h2>
+    <div class="cols"><div class="card"><strong>Silent to strangers.</strong><span>Only my own account is allowed. Anyone else gets no reply at all, so the bot doesn't even reveal that it exists.</span></div><div class="card"><strong>Everything stays local.</strong><span>The AI model, the memory and the schedule all live on my PC. Nothing is sent to an AI company.</span></div><div class="card"><strong>Safe web reading.</strong><span>The web reader refuses addresses that point back into my own network, and re-checks after every redirect.</span></div></div>
+  </section>
+
+  <section class="block">
+    <h2>What it taught me</h2>
+    <p><strong>A silent failure is worse than a loud one.</strong> I changed the chat model once, and memory search quietly stopped working, because notes saved with one model can't be compared with another. Nothing crashed; the answers just got worse. Now every saved note is labelled with the model that made it, and search ignores the ones that don't match.</p><p><strong>It became the first draft of Haakim.</strong> The scheduled night jobs, the two-part memory and the rule about staying private all carried over.</p>
+  </section>
+
+  <section class="block">
+    <h2>Built with</h2>
+    <div class="chips"><span class="chip">Python</span><span class="chip">python-telegram-bot</span><span class="chip">Ollama</span><span class="chip">SQLite</span><span class="chip">APScheduler</span><span class="chip">74 offline tests</span></div>
+    <a class="back" href="index.html">← All builds</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-left">©2026 HATIM JAMALI</div>
+  <div class="footer-links">
+    <a href="https://hatimhjamali-hub.github.io/portfolio/">Game design portfolio</a>
+    <a href="https://www.linkedin.com/in/hatim-jamali-510889212/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:hatimhjamali@gmail.com">Email</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
